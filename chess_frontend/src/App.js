@@ -593,7 +593,19 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
-        <h1 className="title" style={{marginBottom: 10, color: '#2e2e2e'}}>Chess Mastery</h1>
+        <h1
+          className="title"
+          style={{
+            marginBottom: 10,
+            color: '#2e2e2e',
+            textAlign: 'left',
+            fontStyle: 'italic',
+            textDecoration: 'underline',
+            backgroundColor: 'rgba(206, 208, 98, 1)'
+          }}
+        >
+          Chess Master Game
+        </h1>
         <span className="subtitle" style={{ color: '#888'}}>A modern, minimal chess game</span>
         <ModeSelector mode={mode} setMode={setMode} playing={moveHistory.length > 0} onRestart={handleRestart}/>
         <StatusBar status={status} turn={state.turn} winner={statusObj.winner} />
